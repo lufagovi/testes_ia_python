@@ -1,0 +1,8 @@
+tensorflow==2.12
+flask
+numpy
+kagglehub
+pandas
+pillow
+flask-cors
+sentence-transformers

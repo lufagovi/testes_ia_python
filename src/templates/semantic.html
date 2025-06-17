@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Análise Semântica</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    textarea { width: 100%; height: 100px; margin-bottom: 1em; }
+    .resultado { margin-top: 1em; font-weight: bold; color: darkblue; }
+  </style>
+</head>
+<body>
+  <h1>🔍 Analisador Semântico</h1>
+  <form method="POST">
+    <label for="entrada">Texto de entrada:</label><br>
+    <textarea name="entrada" required>{{ entrada }}</textarea>
+
+    <label for="opcoes">Opções (uma por linha):</label><br>
+    <textarea name="opcoes" required>{{ opcoes }}</textarea>
+
+    <button type="submit">Analisar</button>
+  </form>
+
+  {% if resultado %}
+    <div class="resultado">{{ resultado }}</div>
+    <h6>duracao={{duracao_ms}} ms</h6>
+  {% endif %}
+</body>
+</html>
