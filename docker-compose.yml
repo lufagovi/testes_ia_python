@@ -2,10 +2,13 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    image: lufagovi/imagempythonxr:latest  # usa a imagem publicada no Docker Hub
     volumes:
-      - ./src:/app  # monta o diretório do host como /app no container
+      - ./src:/app             # monta o diretório do host como /app no container
     ports:
       - "5000:5000"
     environment:
       - PYTHONUNBUFFERED=1
+
+
+      
